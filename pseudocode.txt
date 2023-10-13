@@ -1,0 +1,19 @@
+/****** TASK 0 ******/
+
+* printf is a variadic function, takes in a number of arguments with various data types.
+* printf always starts with a string format "" inside the parenthesis.
+* To create our own printf, it will need to be able to output into the command line (terminal).
+* This means that we could choose from 3 different functions to output into our terminal.
+* Options are 'write', 'fputs' or 'putchar'.
+* To make our printf variadic, we will make use of the <stdarg.h> library.
+* This will allow us to use va_list, va_start, va_arg and va_end.
+
+* In order to return number of characters printed, we will need to use strlen function, thats in <stdio.h> in order to determine the length of the string or create our own _strlen.
+* Our _printf should be able to handle format specifiers, %c, %s and even the modula %.
+
+All this will be done through string parsing.
+* If string parsing is NULL, then end program.
+* If string parsing finds a character then it will print char while incrementing.
+* Printing will take place until it reaches '\0' which means end of string.
+* If '%' is found, it skips % and print next character.
+* If next character is 'c' or 's', then that's a format specifier for char or string.
