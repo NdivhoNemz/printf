@@ -1,0 +1,15 @@
+Algorithm:
+
+-- Create a function int myprintf() with const char* and ‘…’ as its parameters. (‘. . .’ enables the function to receive any number of arguments).
+
+-- Initialize a pointer of type va_list to work with variable arguments. Pass the pointer to va_start.
+
+-- Process the passed string with a delimiter as ‘%’ or ‘\0’, and store it in a token string.
+
+-- For every token starting with ‘%’ check if its next characters are a format specifier defined in C. It can be ‘c’,’s’,’%’.
+
+-- Pass the token string and value retrieved from va_arg() to fprintf() in order to print the required value to the console.
+
+-- Once the whole string is processed, end the va_arg pointer.
+
+-- Return 0.
