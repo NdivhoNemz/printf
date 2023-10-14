@@ -47,7 +47,7 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 's')
 			{
-				char *string = va_arg(num_of_characters, char*);
+				char *string = va_arg(add_arguments, char*);
 				/* string variable stores a string */
 				/* char* as the second argument to va_arg */
 				/* string represented as a pointer in c */
