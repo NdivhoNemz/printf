@@ -8,13 +8,14 @@
 
 void _string(const char *str)
 {
-    if (str != NULL)
-    {
-        size_t length = 0;
-        while (str[length] != '\0')
+	if (str != NULL)
 	{
-            length++;
-        }
-        write(1, str, length);
-    }
+		size_t length = 0;
+
+		while (str[length] != '\0')
+		{
+			length++;
+		}
+		write(1, str, length);
+	}
 }
