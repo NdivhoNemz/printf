@@ -50,33 +50,3 @@ int _printf(const char *format, ...)
 	va_end(add_arguments);
 	return (num_of_characters);
 }
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	write(1, &c, 1);
-	return (1);
-}
-
-/**
- * _strlen - a function that returns the length of a string.
- * @string: string of char
- * Return: 0 (String length)
- */
-int _strlen(char *string)
-{
-	int length = 0;
-
-	while (string[length] != '\0')
-	{
-		length++;
-	}
-	write(1, string, length);
-	return (length);
-}
