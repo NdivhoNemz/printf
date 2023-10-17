@@ -80,17 +80,3 @@ int _strlen(char *string)
 	write(1, string, length);
 	return (length);
 }
-
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
-int main(void)
-{
-	_printf("Test a simple sentence\n");
-	_printf("Test a character %c.\n", 'C');
-	_printf("Test a %s.\n", "string");
-	_printf("Test a %.\n");
-	return (0);
-}
