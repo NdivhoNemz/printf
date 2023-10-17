@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
-
 int _printf(const char *format, ...);
-int _strlen(char *s);
+int _putchar(char c);
+int _strlen(char *string);
 
 /* FLAGS */
 #define F_MINUS 1

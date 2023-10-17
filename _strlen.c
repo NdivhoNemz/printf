@@ -2,19 +2,18 @@
 
 /**
  * _strlen - a function that returns the length of a string.
- * @s: string of char
+ * @string: string of char
  * Return: 0 (String length)
  */
 
-int _strlen(char *s)
+int _strlen(char *string)
 {
 	int length = 0;
 
-	while (*s != '\0')
+	while (*string != '\0')
 	{
 		length++;
-		s++;
+		string++;
 	}
 	return (length);
 }
-/* string length will be used with _printf to get the length of the string */
