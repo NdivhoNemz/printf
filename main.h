@@ -9,5 +9,6 @@ int _putchar(char c);
 int _strlen(char *string);
 int character_count(void);
 extern int num_of_characters; /* external variable */
+int handleSpec(const char *format, ...);
 
 #endif /* MAIN_H */

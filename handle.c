@@ -6,28 +6,43 @@
  * Output to standard output
 */
 
-int  handleSpecifier(const char *format, ...) {
-/**
- * Get the characters
-*/
-    va_list addChar;
+int handleSpec(const char *format, ...)
+{
+    va_list add_argument;
+    int num_of_chars = 0;
     
-/**
- * Check for conditions
-*/
-    if (format == NULL) {
+    if (format == NULL)
+    {
         return (-1);
     }
-    if (*format == 'd') {
-        char data = va_arg(addChar, int);
-        write(1, &data, 1);
-    }
-    if (*format == 'i') {
-        char data = va_arg(addChar, int);
-        write(1, &data, 1);
-    }
+    va_start(add_argument, format);
     
-    va_end(addChar);
-    return 0;
+    while (*format)
+    {
+            if (*format != '%')
+            {
+                num_of_chars += _putchar(*format);
+            }
+            else
+            {
+                format++;
+                switch (*format)
+                {
+                    case 'd';
+                        num_of_chars += _putchar(va_arg(add_argument));
+                        break;
+                    case 'i';
+                        num_of_chars += _putchar(va_arg(add_argument));
+                        break;
+                    default:
+                        num_of_chars += _putchar('%');
+                        format--
+                        break;
+                }
+                
+                format++
+            }
+            va_end(add_argument);
+            return (num_of_chars);
+    }
 }
-
